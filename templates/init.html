@@ -1,0 +1,42 @@
+{{define "init"}}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Init</title>
+        <link rel="stylesheet" href="/static/css/init.css">
+    </head>
+    <body>
+        <div class="main_container">
+            <form action="/user/treatment" method="post">
+                <h2>Renseigner vos données</h2>
+                <div>
+                    <div class="line">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="user_nom" required>
+                    </div>
+                    <div class="line">
+                        <label for="prenom">Prenom</label>
+                        <input type="text" id="prenom" name="user_prenom" required>
+                    </div>
+                    <div class="line">
+                        <label for="date">Date d'anniversaire</label>
+                        <input type="date" id="date" name="user_date" required>
+                    </div>  
+                    <div class="line">
+                        <label for="sexe">Sexe</label>
+                        <select name="user_sexe" id="sexe">Sexe
+                            <option value="Homme">Homme</option>
+                            <option value="Femme">Femme</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="cont_button">
+                    <button type="submit">Valider</button>
+                </div>               
+            </form>     
+        </div>     
+    </body>
+</html>
+{{end}}

@@ -1,0 +1,24 @@
+{{define "change"}}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Change</title>
+        <link rel="stylesheet" href="/static/css/numbercount.css">
+    </head>
+    <body>
+            <h2>Apprends à compter en appuyant sur f5</h2>
+        <div class="main_container">
+            <div class="text">
+            <p>{{.Count}}</p>
+            {{if .CheckValue}}
+            <p>Nombre pair !</p>
+            {{else}}
+            <p>Nombre impair !</p>
+            {{end}}
+        </div>
+        </div>
+    </body>     
+</html>
+{{end}}
